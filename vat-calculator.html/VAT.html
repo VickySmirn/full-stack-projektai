@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>PVM skaiciuotuvas</title>
+</head>
+<style>
+    body{
+height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+    }
+    h2{
+      text-align: center;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      padding: 1.2rem;
+      color: black;
+    }
+    *{
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+    .vat-calc{
+      background: lightblue;
+      padding: 3rem 1rem;
+      border-radius: 10px;
+      box-shadow: 0px 1px 5px 0px cornsilk;
+      margin: 0 auto;
+    }
+
+</style>
+<body>
+  <div class="vat-calc">
+        <h2>VAT calculator</h2>
+        <table>
+        <form>
+            <label for="taxRate">Tax Rate : </label>
+            <form action="/action_page.php">
+                <select id="taxRate" title="taxRate" name="tax">
+                  <option value="21">21%</option>
+                  <option value="9">9%</option>
+                  <option value="5">5%</option>
+                </select>
+            <br><br>
+            <label for="Subtotal">Subtotal (without VAT) : </label><input type="text" id="Subtotal"/><br><br>
+            <label for="salesRate">Sales Rate (with VAT) : </label><input type="text" id="salesRate" disabled/><br><br>
+            <label for="total">Total (with VAT) : </label><input type="text" id="total" disabled/><br><br>
+            <input type="button" id="btnTax" value="calculate"/>
+            <input type="reset" value="Clear"/>
+          </form>
+</table>
+</div>
+
+    <script src="VAT.js"></script>
+    
+</body>
+</html>
